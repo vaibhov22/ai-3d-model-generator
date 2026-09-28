@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI 3D Model Generator
 
-## Getting Started
+An AI-powered web application that converts natural language prompts into interactive 3D models.
 
-First, run the development server:
+## 🚀 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://ai-3d-model-generator-zeta.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Source Code
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+https://github.com/vaibhov22/ai-3d-model-generator
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+- Generate 3D models from text prompts
+- AI-powered text-to-3D generation
+- Interactive 3D preview
+- Rotate and zoom the model
+- Download generated models as `.glb`
+- Responsive modern UI
+- Example prompts for quick testing
+- Error handling for temporary API rate limits
+- Deployed on Vercel
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- TypeScript
+- React
+- React Three Fiber
+- Three.js
+- Drei
+- Tailwind CSS
+- AI Text-to-3D API
+- Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ How It Works
 
-## Deploy on Vercel
+1. User enters a natural-language description.
+2. The Next.js API route sends the prompt to the AI text-to-3D service.
+3. The service generates a `.glb` 3D model.
+4. The application polls the generation status.
+5. The generated model is loaded into the React Three Fiber viewer.
+6. Users can rotate, zoom, and download the model.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+ai-3d-model-generator/
+├── app/
+│   ├── api/
+│   │   └── generate/
+│   │       └── route.ts
+│   ├── components/
+│   │   └── ModelViewer.tsx
+│   ├── page.tsx
+│   └── layout.tsx
+├── public/
+├── package.json
+├── tsconfig.json
+└── README.md
